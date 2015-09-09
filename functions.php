@@ -116,6 +116,10 @@ add_action( 'widgets_init', 'zushi_widgets_init' );
 function zushi_scripts() {
 	wp_enqueue_style( 'zushi-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'zushi-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,300,900,700' );
+
+	wp_enqueue_style( 'zushi-font-awesome', "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+
 	wp_enqueue_script( 'zushi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'zushi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
