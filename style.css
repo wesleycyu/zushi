@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
+# Header
 # Widgets
 # Content
     ## Posts and pages
@@ -524,10 +525,14 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
+	position: realtive;
 	float: left;
 	width: 100%;
+	display: block;
+	clear: both;
+	font-family: "Lato", sans-serif;
+	text-transform: uppercase;
+	background: #313131;
 }
 
 .main-navigation ul {
@@ -544,11 +549,16 @@ a:active {
 
 .main-navigation a {
 	display: block;
+	padding: 1.3em 1em;
+	font-size: 14px;
 	text-decoration: none;
+	line-height: 1.3em;
+	color: white;
 }
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	background: #4d4d4d;
 	float: left;
 	position: absolute;
 	top: 1.5em;
@@ -713,6 +723,64 @@ a:active {
 .site-content:after,
 .site-footer:after {
 	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Heading
+--------------------------------------------------------------*/
+
+.header-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.header-background-image {
+	background: no-repeat center;
+	background-size: cover!important;
+}
+
+.header-background-image .title-box {
+	background: #333;
+}
+
+.site-branding {
+	padding: 6em;
+	text-align: center;
+	background: #2c86ba;
+}
+
+.title-box {
+	width: 600px;
+	max-width: 75%;
+	padding: 4rem;
+	margin: 0 auto;
+	border: solid 1px #fff;
+}
+
+.site-title {
+	font-weight: 700;
+	font-size: 40px;
+	text-transform: uppercase;
+	line-height: normal;
+	padding-bottom: 1rem;
+}
+
+.site-description {
+	font-weight: 100;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.site-branding {
+		padding: 0;
+	}
+
+	.title-box {
+		max-width: 100%;
+		margin: 0;
+		padding: 4rem;
+		border: none;
+	}
 }
 
 /*--------------------------------------------------------------
